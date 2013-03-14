@@ -1,0 +1,66 @@
+<!Doctype>
+<html>
+	<head>
+	<title>Vinyas Music Page</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+	body {
+	font-family:courier, sans-serif;
+	}	
+		
+	label {
+	width:120px;
+	float:left;
+	font-face: courier;
+	font-weight:500;
+	}
+	.submit{
+	    margin-left:25px;
+	    width:270px;
+	}	
+	
+	form {
+	margin:0 auto;
+	padding:10px;
+	display:table;
+	}
+	
+	</style>
+	<script type="text/javascript">
+	function validate() {
+	var check = document.musicSearchForm.musicQuery.value.replace(/^\s+|\s+$/g, '');
+	
+	if(check === "") {
+	alert("Please enter something in the search box");
+	return false;
+	}
+	else return true;
+	}
+		
+	</script>
+	
+	</head>
+	<body>
+	<form action="http://cs-server.usc.edu:33169/phptest.php" target="_blank" name="musicSearchForm" method="POST" onSubmit="return validate();">
+	<h1 style="text-align:center;">Discography Search</h1>
+	<fieldset>
+	<p>
+	<label for="musicQuery">Search: </label><input id="musicQuery" type="text" name="musicQuery" value="">
+	</p>
+	<p>
+	<label for="musicType">Type: </label>
+	<select name="musicType">
+	<option value="artists">Artists</option>
+	<option value="albums">Albums</option>
+	<option value="songs">Songs</option>
+	</select>
+	</p>
+	<br><br>
+	<p>
+	<input class="submit" target="_blank" type="submit" name="musicSubmit" value="Search">
+	</p>
+	</fieldset>
+	</form>
+	</body>
+	
+	</html>
