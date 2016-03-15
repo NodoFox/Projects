@@ -1,7 +1,3 @@
-Vinyas Ramesh Kedigehalli
-3498-8651-56
-
-
 The program is written in Java. 
 
 Commands to compile and run the code.
